@@ -16,5 +16,6 @@ public class UIManager : MonoBehaviour
     public void SetScore()
     {
         score += 1;
+        txtScore.text = score.ToString();
     }
 }
