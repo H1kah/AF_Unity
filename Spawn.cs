@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject objetoPrefab; // O prefab do objeto que será spawnado
-    public float raioSpawn = 3f; // Raio em que o objeto pode ser spawnado
-    public float intervaloMinimo = 2f; // Intervalo mínimo entre spawns
-    public float intervaloMaximo = 5f; // Intervalo máximo entre spawns
+    public GameObject objetoPrefab;
+    public float raioSpawn = 3f;
+    public float intervaloMinimo = 2f;
+    public float intervaloMaximo = 5f;
 
     void Start()
     {
