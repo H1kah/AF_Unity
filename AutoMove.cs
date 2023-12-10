@@ -1,20 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoMove : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public Vector2 direction;
-    public float force = 5f;
+    public float speed = 5f;
+    public Vector2 moveDirection = Vector2.right;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
-    private void FixedUpdate()
+    void Update()
     {
-        rb.AddForce(direction.normalized * force);
+        transform.Translate(moveDirection * speed * Time.deltaTime);
     }
 }
