@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DestruirPorTempo : MonoBehaviour
+public class TempoDestruir : MonoBehaviour
 {
     public float tempoParaDestruir = 0f;
 
