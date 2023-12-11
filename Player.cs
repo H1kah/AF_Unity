@@ -4,28 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //o que um player tem? Vida
-    public int vida;
-
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public Meu_UI uimanager;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            vida -= 1;
+            uimanager.SetVida(1);
             
-            if(vida == 0)
+            if(uimanager.vida <= 0)
             {
+                uimanager.GameOver();
                 Destroy(gameObject);
-                Debug.Log("You Lose");
             }
         }
     }
