@@ -6,7 +6,6 @@ public class AutoRotate : MonoBehaviour
 
     void Update()
     {
-        // Rotação automática
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
     }
 }
